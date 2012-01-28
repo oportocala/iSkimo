@@ -1,7 +1,7 @@
 package com.iskimo.display
 {
 	import flash.display.Bitmap;
-	import flash.display.Sprite;
+	import com.iskimo.display.Sprite;
 	import flash.geom.Matrix;
 	
 	public class Sprite extends flash.display.Sprite
@@ -15,9 +15,9 @@ package com.iskimo.display
 		{
 		}
 		
-		public function drawRect(x:int, y:int, w:uint, h:uint, color:uint):com.iskimo.display.Sprite
+		public function drawRect(x:int, y:int, w:uint, h:uint, color:uint, alpha:Number = 1):Sprite
 		{
-			graphics.beginFill(color, 1);
+			graphics.beginFill(color, alpha);
 			graphics.drawRect(x, y, w, h);
 			graphics.endFill();
 			return this;

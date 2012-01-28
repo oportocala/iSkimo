@@ -1,5 +1,6 @@
 package com.iskimo.screens
 {
+	import com.iskimo.Controls;
 	import com.iskimo.Engine;
 	import com.iskimo.Images;
 	import com.iskimo.Sprite;
@@ -19,12 +20,19 @@ package com.iskimo.screens
 		protected var backgroundArr:Array = [new Sprite(), new Sprite()];
 		protected var backgroundHeight:uint = 960;
 		protected var objects:Sprite = new Sprite();
+		protected var controls:Controls = new Controls();
 		
 		override protected function attached(e:Event):void
 		{
 			initBackground();
 			initObjects();
 			initEngine();
+			initControls();
+		}
+		
+		protected function initControls():void 
+		{
+			addChild(controls);
 		}
 		
 		protected function initEngine():void

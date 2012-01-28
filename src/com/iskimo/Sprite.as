@@ -6,9 +6,9 @@ package com.iskimo
 	
 	public class Sprite extends flash.display.Sprite
 	{
-		public function drawRect(x:int, y:int, w:uint, h:uint, color:uint):com.iskimo.Sprite
+		public function drawRect(x:int, y:int, w:uint, h:uint, color:uint, alpha:Number = 1):com.iskimo.Sprite
 		{
-			graphics.beginFill(color, 1);
+			graphics.beginFill(color, alpha);
 			graphics.drawRect(x, y, w, h);
 			graphics.endFill();
 			return this;

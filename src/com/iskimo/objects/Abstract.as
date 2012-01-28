@@ -16,7 +16,7 @@ package com.iskimo.objects
 		
 		private function move():void 
 		{
-			trace('move called');
+			
 		}
 		
 		public function notify(event:String, data:Object):void

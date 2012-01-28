@@ -1,4 +1,4 @@
-package com.iskimo
+package com.iskimo.display
 {
 	import flash.display.Bitmap;
 	import flash.display.Sprite;
@@ -6,7 +6,16 @@ package com.iskimo
 	
 	public class Sprite extends flash.display.Sprite
 	{
-		public function drawRect(x:int, y:int, w:uint, h:uint, color:uint):com.iskimo.Sprite
+		public function Sprite()
+		{
+			init();
+		}
+		
+		protected function init():void
+		{
+		}
+		
+		public function drawRect(x:int, y:int, w:uint, h:uint, color:uint):com.iskimo.display.Sprite
 		{
 			graphics.beginFill(color, 1);
 			graphics.drawRect(x, y, w, h);
@@ -15,7 +24,7 @@ package com.iskimo
 			
 		}
 		
-		public function drawImage(src:Class):com.iskimo.Sprite
+		public function drawImage(src:Class):com.iskimo.display.Sprite
 		{
 			var image:Bitmap = new src();
 			var m:Matrix = new Matrix();

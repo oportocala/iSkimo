@@ -2,7 +2,7 @@ package com.iskimo.screens
 {
 	import com.iskimo.Engine;
 	import com.iskimo.Images;
-	import com.iskimo.Sprite;
+	import com.iskimo.display.Sprite;
 	import com.iskimo.objects.Abstract;
 	import com.iskimo.objects.Character;
 	import com.iskimo.pubsub.PubSub;
@@ -43,7 +43,6 @@ package com.iskimo.screens
 		
 		protected function initObjects():void
 		{
-			objects.addChild(new Character());
 			addChild(objects);
 		}
 		

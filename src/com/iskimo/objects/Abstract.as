@@ -1,6 +1,6 @@
 package com.iskimo.objects
 {
-	import com.iskimo.Sprite;
+	import com.iskimo.display.Sprite;
 	import com.iskimo.pubsub.Notifiable;
 	import com.iskimo.pubsub.PubSub;
 	
@@ -16,7 +16,6 @@ package com.iskimo.objects
 		
 		private function move():void 
 		{
-			trace('move called');
 		}
 		
 		public function notify(event:String, data:Object):void

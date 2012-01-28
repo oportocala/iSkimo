@@ -1,6 +1,6 @@
 package com.iskimo.screens
 {
-	import com.iskimo.Sprite;
+	import com.iskimo.display.Sprite;
 	
 	import flash.display.Stage;
 	import flash.events.Event;
@@ -17,10 +17,6 @@ package com.iskimo.screens
 			super();
 			this.addEventListener(Event.ADDED_TO_STAGE, this.attached);
 			init();
-		}
-		
-		protected function init():void
-		{
 		}
 		
 		public function attach(stage:Stage):void

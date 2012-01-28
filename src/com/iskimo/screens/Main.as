@@ -3,7 +3,9 @@ package com.iskimo.screens
 	import com.iskimo.Engine;
 	import com.iskimo.Images;
 	import com.iskimo.Sprite;
+	import com.iskimo.objects.Abstract;
 	import com.iskimo.objects.Character;
+	import com.iskimo.pubsub.PubSub;
 	
 	import flash.display.Screen;
 	import flash.events.Event;
@@ -61,7 +63,7 @@ package com.iskimo.screens
 		
 		public function moveObjects():void
 		{
-			dispatchEvent(new com.iskimo.Event(com.iskimo.Event.MOVE_OBJECTS));
+			PubSub.publish(com.iskimo.objects.Abstract.MOVE, new Object());
 		}
 	}
 }

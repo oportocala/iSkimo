@@ -1,19 +1,31 @@
 package com.iskimo.objects
 {
-	import com.iskimo.Event;
 	import com.iskimo.Sprite;
+	import com.iskimo.pubsub.Notifiable;
+	import com.iskimo.pubsub.PubSub;
 	
-	public class Abstract extends Sprite
+	public class Abstract extends Sprite implements Notifiable
 	{
+		public static const MOVE:String = "OBJECT_ABSTRACT_MOVE";
+		
 		public function Abstract()
 		{
 			super();
-			addEventListener(Event.MOVE_OBJECTS, move);
+			PubSub.subscribe(this, MOVE);
 		}
 		
 		private function move():void 
 		{
 			trace('move called');
+		}
+		
+		public function notify(event:String, data:Object):void
+		{
+			switch(event){
+				case MOVE:
+					move();
+					break;
+			}
 		}
 	}
 }

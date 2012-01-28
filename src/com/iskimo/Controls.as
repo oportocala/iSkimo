@@ -20,7 +20,7 @@ package com.iskimo
 		
 		protected function onAdded(e:flash.events.Event):void
 		{
-			drawRect(0, 0, stage.stageWidth, stage.stageHeight, 0x000000, .5);
+			drawRect(0, 0, stage.stageWidth, stage.stageHeight, 0x000000, 0);
 			addEventListener(TouchEvent.TOUCH_TAP, onTap);
 			addEventListener(MouseEvent.CLICK, onClick);
 		}

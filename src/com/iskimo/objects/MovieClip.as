@@ -15,6 +15,7 @@ package com.iskimo.objects
 		protected var currentFrame = 0;
 		protected var yoyo:Boolean = false;
 		protected var yoyoDirection:int = 1;
+		protected var xOffset = 0;
 		
 		override protected function init():void
 		{
@@ -92,8 +93,10 @@ package com.iskimo.objects
 				removeChild(getChildAt(0));
 			}catch(e:Error){}
 			
-			trace(currentFrame);
+			//trace(currentFrame);
 			addChild(frames[currentFrame]);
+			
+			frames[currentFrame].x = xOffset;
 		}
 		
 		public function stop():MovieClip

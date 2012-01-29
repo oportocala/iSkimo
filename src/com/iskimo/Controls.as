@@ -2,6 +2,7 @@ package com.iskimo
 {
 	import com.iskimo.pubsub.PubSub;
 	
+	import com.iskimo.display.Sprite;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.events.TouchEvent;
@@ -9,8 +10,8 @@ package com.iskimo
 	public class Controls extends Sprite
 	{
 		
-		protected static const TAP_LEFT = "TAP_LEFT";
-		protected static const TAP_RIGHT = "TAP_RIGHT";
+		public static const TAP_LEFT = "TAP_LEFT";
+		public static const TAP_RIGHT = "TAP_RIGHT";
 		
 		public function Controls()
 		{
@@ -43,6 +44,7 @@ package com.iskimo
 			}else{
 				event_string = TAP_RIGHT;
 			}
+			
 			PubSub.publish(event_string, {});
 		}
 	}

@@ -3,11 +3,47 @@
 
   <id>com.gamevil.zenonia2</id>
 
-  <versionNumber>1.0</versionNumber>
+  <versionNumber>0.1.2</versionNumber>
 
   <filename>main</filename>
 
   <description/>
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
 
   
 
@@ -61,6 +97,42 @@
 
 
 
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
   <!-- To localize the name, use the following format for the name element.<name><text xml:lang="en">English App name goes here</text><text xml:lang="fr">French App name goes here</text><text xml:lang="ja">Japanese App name goes here</text></name>-->
 
   <copyright/>
@@ -76,7 +148,14 @@
     <autoOrients>false</autoOrients>
   </initialWindow>
 
-  <icon/>
+  <icon>
+    <image29x29>AppIconsForPublish/29.png</image29x29>
+    <image57x57>AppIconsForPublish/57.png</image57x57>
+    <image48x48>AppIconsForPublish/48.png</image48x48>
+    <image72x72>AppIconsForPublish/72.png</image72x72>
+    <image114x114>AppIconsForPublish/114.png</image114x114>
+    <image512x512>AppIconsForPublish/512.png</image512x512>
+  </icon>
 
   <customUpdateUI>false</customUpdateUI>
 
@@ -85,7 +164,7 @@
   <iPhone>
     <InfoAdditions>
       
-      <![CDATA[<key>UIDeviceFamily</key><array><string>1</string><string>2</string></array>]]>
+      <![CDATA[<key>UIDeviceFamily</key><array><string>1</string><string>2</string></array><key>UIPrerenderedIcon</key><true/>]]>
     </InfoAdditions>
     <requestedDisplayResolution>high</requestedDisplayResolution>
   </iPhone>
@@ -105,11 +184,66 @@
 
       
 
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
       <![CDATA[<manifest>
 <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>]]>
     </manifestAdditions>
   </android>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

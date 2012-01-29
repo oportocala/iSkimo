@@ -2,13 +2,11 @@ package com.iskimo.screens
 {
 	import com.iskimo.Engine;
 	import com.iskimo.Images;
+	import com.iskimo.Score;
 	import com.iskimo.display.Sprite;
 	import com.iskimo.objects.Abstract;
 	import com.iskimo.objects.Character;
 	
-	
-	
-	import flash.display.Screen;
 	import flash.events.Event;
 	
 	public class Main extends Abstract
@@ -18,19 +16,21 @@ package com.iskimo.screens
 		protected var background:Sprite = new Sprite();
 		protected var backgroundArr:Array = [new Sprite(), new Sprite()];
 		protected var backgroundHeight:uint = 960;
-		
+		protected var score:Score = new Score();
 	
 		
 		override protected function attached(e:Event):void
 		{
 			initBackground();
 			initEngine();
+			//initScore();
 		}
 		
 		protected function initEngine():void
 		{
 			engine = new Engine(this);
 			engine.start();
+			
 		}
 		
 		protected function initBackground():void
@@ -54,6 +54,11 @@ package com.iskimo.screens
 			{
 				bg2.y = -backgroundHeight;
 			}
+		}
+		protected function initScore():void 
+		{
+			score.y = backgroundHeight-score.height;
+			addChild(score);
 		}
 	}
 }

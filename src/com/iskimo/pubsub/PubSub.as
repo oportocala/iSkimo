@@ -22,7 +22,7 @@ package com.iskimo.pubsub
 					object.notify(event, data);
 				}
 			}
-			trace("NOTIFIED: " + event);
+			//trace("NOTIFIED: " + event);
 		}
 	}
 }

@@ -11,8 +11,8 @@ package com.iskimo.objects
 	{
 		public static const LINE_PASSED = "GRID_LINE_PASSED";
 		
-		protected var cellSize = 90;
-		protected var gridSize = [10, 7];
+		public static var cellSize = 90;
+		public static var gridSize = [11, 7];
 		
 		protected var objects:Array = [];
 		protected var moveCount = 0;
@@ -20,8 +20,9 @@ package com.iskimo.objects
 		override protected function init():void
 		{
 			super.init();
-			drawGrid();
+			//drawGrid();// DRAW GRID
 			PubSub.subscribe(this, com.iskimo.objects.Abstract.MOVE);
+			PubSub.subscribe(this, com.iskimo.objects.Abstract.REMOVE);
 		}
 		
 		protected function drawGrid():void
@@ -47,7 +48,7 @@ package com.iskimo.objects
 			child.x = x * cellSize;
 			child.y = y * cellSize;
 			addChild(child);
-			objects.push(child);
+			//objects.child;
 			
 			return this;
 		}
@@ -62,7 +63,14 @@ package com.iskimo.objects
 						PubSub.publish(LINE_PASSED, {lineCount: moveCount/9});
 					}
 					break;
+				
+				case com.iskimo.objects.Abstract.REMOVE:
+					if(contains(data.obj)){
+						removeChild(data.obj);
+					}
+					break;
 			}
 		}
+		
 	}
 }

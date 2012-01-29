@@ -2,6 +2,7 @@ package com.iskimo.screens
 {
 	import com.iskimo.display.Sprite;
 	
+	import flash.display.DisplayObjectContainer;
 	import flash.display.Stage;
 	import flash.events.Event;
 	import flash.text.engine.SpaceJustifier;

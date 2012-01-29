@@ -1,10 +1,12 @@
-package com.iskimo.display
+package com.iskimo.objects
 {
+	import com.iskimo.display.Sprite;
+	
 	import flash.display.Bitmap;
 	import flash.events.TimerEvent;
 	import flash.utils.Timer;
 
-	public class MovieClip extends Sprite
+	public class MovieClip extends Abstract
 	{
 		protected var frames:Array = [];
 		protected var images:Array = [];

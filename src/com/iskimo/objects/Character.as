@@ -1,7 +1,6 @@
 package com.iskimo.objects
 {
 	import com.iskimo.Images;
-	import com.iskimo.display.MovieClip;
 
 	public class Character extends MovieClip
 	{
@@ -19,6 +18,10 @@ package com.iskimo.objects
 			yoyo = true;
 			
 			super.init();
+		}
+		
+		override protected function move():void 
+		{
 		}
 	}
 }

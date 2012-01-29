@@ -5,6 +5,9 @@ package com.iskimo
 		[Embed(source='../../../resources/images/bg.jpg')]
 		public static var background:Class;
 		
+		[Embed(source='../../../resources/images/bg.vflip.jpg')]
+		public static var background_flip:Class;
+		
 		[Embed(source='../../../resources/images/character/1.png')]
 		public static var character1:Class;
 		
